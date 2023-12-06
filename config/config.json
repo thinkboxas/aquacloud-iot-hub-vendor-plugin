@@ -2,14 +2,14 @@
   "sensors": [
     {
       "unit_id": "unit_001",
-      "sensor_type": "FeedingIntensityType",
+      "sensor_type": "FeedingIntensitySensorType",
       "mapping": {
         "FeedingIntensity": "unit_001_intensity"
       }
     },
     {
       "unit_id": "unit_001",
-      "sensor_type": "CalculatedAccumulatedFeeding",
+      "sensor_type": "CalculatedAccumulatedFeedingSensorType",
       "mapping": {
         "FedAmount": "unit_001_accumulated_feed_today"
       }
@@ -25,14 +25,14 @@
     },
     {
       "unit_id": "unit_002",
-      "sensor_type": "FeedingIntensityType",
+      "sensor_type": "FeedingIntensitySensorType",
       "mapping": {
         "FeedingIntensity": "unit_002_intensity"
       }
     },
     {
       "unit_id": "unit_002",
-      "sensor_type": "CalculatedAccumulatedFeeding",
+      "sensor_type": "CalculatedAccumulatedFeedingSensorType",
       "mapping": {
         "FedAmount": "unit_002_accumulated_feed_today"
       }
@@ -48,14 +48,14 @@
     },
     {
       "unit_id": "unit_003",
-      "sensor_type": "FeedingIntensityType",
+      "sensor_type": "FeedingIntensitySensorType",
       "mapping": {
         "FeedingIntensity": "unit_003_intensity"
       }
     },
     {
       "unit_id": "unit_003",
-      "sensor_type": "CalculatedAccumulatedFeeding",
+      "sensor_type": "CalculatedAccumulatedFeedingSensorType",
       "mapping": {
         "FedAmount": "unit_003_accumulated_feed_today"
       }
@@ -64,7 +64,7 @@
       "unit_id": "unit_003",
       "sensor_type": "FeedSiloSensorType",
       "mapping": {
-        "Feed": "unit_001_accumulated_feed",
+        "Feed": "unit_003_accumulated_feed",
         "SiloCapacity": "unit_003_silo_capacity",
         "FillPercentage": "unit_003_fill_percentage"
       }

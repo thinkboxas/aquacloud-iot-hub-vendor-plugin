@@ -2,8 +2,7 @@ import logging
 from typing import Any
 
 from asyncua import Server, ua, Node
-from asyncua.ua import String, Int16
-
+from asyncua.ua import String, Int16, NodeId
 
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
@@ -55,6 +54,13 @@ class OPCUAServer:
 
     def get_node(self, identifier: str) -> Node | None:
         node_id = ua.NodeId(String(identifier), Int16(self._ns))
+        try:
+            return self._server.get_node(node_id)
+        except Exception as e:
+            _logger.warning("Node not found", e)
+            return None
+
+    async def get_node_by_node_id(self, node_id: NodeId) -> Node | None:
         try:
             return self._server.get_node(node_id)
         except Exception as e:

@@ -43,19 +43,44 @@ class FeedingConfigurationParser:
 
     @staticmethod
     def _create_standard_sensor(sensor: SensorModel) -> BaseSensorModel:
+        namespace_uri = "http://www.opcfoundation.org/UA/units/un/cefact"
         if sensor.sensor_type == FeedingSensorType.FEEDING_INTENSITY:
-            return FeedingIntensitySensorModel()
+            model = FeedingIntensitySensorModel()
+            model.feeding_intensity.engineering_units.namespace_uri = namespace_uri
+            model.feeding_intensity.engineering_units.display_name = "g/s"
+            model.feeding_intensity.engineering_units.description = "Gram per second"
         elif sensor.sensor_type == FeedingSensorType.FEED_SILO:
-            return FeedSiloSensorModel()
+            model = FeedSiloSensorModel()
+            model.feed.engineering_units.namespace_uri = namespace_uri
+            model.feed.engineering_units.display_name = "kg"
+            model.feed.engineering_units.description = "Kilogram"
+            model.silo_capacity.engineering_units.namespace_uri = namespace_uri
+            model.silo_capacity.engineering_units.display_name = "kg"
+            model.silo_capacity.engineering_units.description = "Kilogram"
+            model.fill_percentage.engineering_units.namespace_uri = namespace_uri
+            model.fill_percentage.engineering_units.display_name = "%"
+            model.fill_percentage.engineering_units.description = "Percentage"
         else:
-            return CalculatedAccumulatedFeedingSensorModel()
+            model = CalculatedAccumulatedFeedingSensorModel()
+            model.fed_amount.engineering_units.namespace_uri = namespace_uri
+            model.fed_amount.engineering_units.display_name = ""
+            model.fed_amount.engineering_units.description = ""
+
+        model.feed_type.pellet_size.engineering_units.namespace_uri = namespace_uri
+        model.feed_type.pellet_size.engineering_units.display_name = "mm"
+        model.feed_type.pellet_size.engineering_units.description = "Millimeter"
+        model.feed_type.mass_per_pellet.engineering_units.namespace_uri = namespace_uri
+        model.feed_type.mass_per_pellet.engineering_units.display_name = "g"
+        model.feed_type.mass_per_pellet.engineering_units.description = "Gram"
+
+        return model
 
     def create_mapping(self) -> dict[str, list[MappingModel]]:
         mapping: dict[str, list[MappingModel]] = {}
         for sensor in self._sensors:
             sensor_name = sensor.sensor_type.replace("Type", "")
             for key in sensor.mapping:
-                mapping_key = sensor.unit_id + ":" + sensor_name + ":" + sensor.mapping[key]
+                mapping_key = sensor.unit_id + ":" + sensor.mapping[key] + ":" + sensor_name
                 mapping_model = MappingModel(
                     unit_id=sensor.unit_id,
                     sensor=sensor_name,

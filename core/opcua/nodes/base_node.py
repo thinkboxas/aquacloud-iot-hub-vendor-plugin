@@ -26,9 +26,8 @@ class Base(metaclass=abc.ABCMeta):
         self.parent_node = parent_node
         self._browser_name = browser_name
         self.node: Node | None = None
-
         if path != "":
-            self.identifier = path + "|" + self.identifier
+            self.identifier = path + "|" + "Sensor" + "|" + model.name
 
     @abc.abstractmethod
     async def update_object_properties_node(self):
@@ -38,7 +37,6 @@ class Base(metaclass=abc.ABCMeta):
         node_id = ua.NodeId(String(self.identifier), Int16(self.ns))
         type_definition_identifier = get_type_definition_identifier_from_model(self.model)
         type_definition = ua.NodeId(String(type_definition_identifier), Int16(self.ns))
-        print("type_definition", type_definition)
         try:
             return await create_object(self.parent_node, node_id, self._browser_name, type_definition)
         except Exception as e:

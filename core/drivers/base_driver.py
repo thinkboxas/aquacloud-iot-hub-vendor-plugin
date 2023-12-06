@@ -19,6 +19,10 @@ class BaseDriver(metaclass=abc.ABCMeta):
             await unit.init()
 
     @abc.abstractmethod
+    def on_data_change(self, tag: str, value: float, timestamp: str):
+        pass
+
+    @abc.abstractmethod
     def parse_config(self):
         pass
 

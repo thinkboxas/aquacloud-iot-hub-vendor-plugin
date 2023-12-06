@@ -5,6 +5,7 @@ from asyncua import Node, ua
 from aquacloud_common.core.core_type import OrgNodeType
 from aquacloud_common.models.common.external_reference import ExternalReferenceModel
 from aquacloud_common.models.common.position import PositionModel
+from aquacloud_common.models.sensor.analog_item_model import Range, EUInformation
 from core.opcua.nodes.external_reference_node import ExternalReference
 
 
@@ -98,3 +99,16 @@ async def get_node_containers(node: Node) -> list[Node]:
         print(e)
 
     return containers
+
+
+def parse_range(r: Range) -> ua.Range:
+    return ua.Range(Low=ua.Double(r.low), High=ua.Double(r.high))
+
+
+def parse_eu_information(eu_information: EUInformation) -> ua.EUInformation:
+    return ua.EUInformation(
+        NamespaceUri=ua.String(eu_information.namespace_uri),
+        UnitId=ua.Int32(eu_information.unit_id),
+        DisplayName=ua.LocalizedText(eu_information.display_name),
+        Description=ua.LocalizedText(eu_information.description)
+    )
