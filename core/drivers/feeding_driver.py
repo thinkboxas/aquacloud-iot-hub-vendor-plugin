@@ -13,7 +13,7 @@ from core.drivers.base_driver import BaseDriver
 from core.drivers.feeding_config_parser import FeedingConfigurationParser
 
 
-POLL_TIME_INTERVAL = int(os.getenv("TIME_INTERVAL", 10))
+POLL_TIME_INTERVAL = int(os.getenv("TIME_INTERVAL", 600))
 
 
 class FeedingDriver(BaseDriver):
@@ -24,43 +24,45 @@ class FeedingDriver(BaseDriver):
         self.units = config_parser.create_units()
         self.mapping = config_parser.create_mapping()
 
-    def _simulate_unit_feeding_sensor_data(self, unit: UnitModel):
+    async def _simulate_unit_feeding_sensor_data(self, unit: UnitModel):
         timestamp = time.time()
         timestamp = datetime.fromtimestamp(timestamp)
         timestamp = timestamp.strftime("%Y-%m-%d %H:%M:%S")
         for sensor in unit.sensors:
             if sensor.__class__ == CalculatedAccumulatedFeedingSensorModel:
-                accumulated_feed_today = random.uniform()
+                accumulated_feed_today = random.uniform(0, 100)
                 tag = unit.id + ":" + unit.id + "_accumulated_feed_today" + ":" + sensor.name
-                self.on_data_change(tag, accumulated_feed_today, timestamp)
+                await self.on_data_change(tag, accumulated_feed_today, timestamp)
             elif sensor.__class__ == FeedingIntensitySensorModel:
-                intensity = random.uniform()
+                intensity = random.uniform(0, 100)
                 tag = unit.id + ":" + unit.id + "_intensity" + ":" + sensor.name
-                self.on_data_change(tag, intensity, timestamp)
+                await self.on_data_change(tag, intensity, timestamp)
             elif sensor.__class__ == FeedSiloSensorModel:
-                feed = random.uniform()
-                silo_capacity = random.uniform()
-                fill_percentage = random.uniform()
+                feed = random.uniform(0, 100)
+                silo_capacity = random.uniform(0, 100)
+                fill_percentage = random.uniform(0, 100)
                 tag = unit.id + ":" + unit.id + "_accumulated_feed" + ":" + sensor.name
-                self.on_data_change(tag, feed, timestamp)
+                await self.on_data_change(tag, feed, timestamp)
                 tag = unit.id + ":" + unit.id + "_silo_capacity" + ":" + sensor.name
-                self.on_data_change(tag, silo_capacity, timestamp)
+                await self.on_data_change(tag, silo_capacity, timestamp)
                 tag = unit.id + ":" + unit.id + "_fill_percentage" + ":" + sensor.name
-                self.on_data_change(tag, silo_capacity, timestamp)
+                await self.on_data_change(tag, fill_percentage, timestamp)
 
-    def _poll_data(self):
+    async def _poll_data(self):
         for unit in self.units:
-            self._simulate_unit_feeding_sensor_data()
+            await self._simulate_unit_feeding_sensor_data(unit)
 
-    def subscribe(self):
-        while self.is_starting is True:
-            # self._poll_data()
-            time.sleep(POLL_TIME_INTERVAL)
+    async def subscribe(self):
+        await self._poll_data()
+        # while self.is_starting is True:
+        #     await self._poll_data()
+        #     time.sleep(POLL_TIME_INTERVAL)
 
     async def start(self):
         self.is_starting = True
         self.parse_config()
         await self.create_unit_nodes()
+        await self.subscribe()
 
     def stop(self):
         self.is_starting = False

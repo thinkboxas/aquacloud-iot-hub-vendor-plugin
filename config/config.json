@@ -41,7 +41,7 @@
       "unit_id": "unit_002",
       "sensor_type": "FeedSiloSensorType",
       "mapping": {
-        "Feed": "unit_001_accumulated_feed",
+        "Feed": "unit_002_accumulated_feed",
         "SiloCapacity": "unit_002_silo_capacity",
         "FillPercentage": "unit_002_fill_percentage"
       }

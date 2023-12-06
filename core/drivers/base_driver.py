@@ -1,5 +1,7 @@
 import abc
 
+from asyncua import ua
+
 from aquacloud_common.models.organization.unit import UnitModel
 from core.opcua.nodes.unit_node import Unit
 from core.opcua.opcua_server import OPCUAServer
@@ -18,9 +20,22 @@ class BaseDriver(metaclass=abc.ABCMeta):
             unit = Unit(unit_model, self.server.get_namespace(), self.server.get_objects_node())
             await unit.init()
 
-    @abc.abstractmethod
-    def on_data_change(self, tag: str, value: float, timestamp: str):
-        pass
+    async def on_data_change(self, tag: str, value: float, timestamp: str):
+        sensors: list[MappingModel] = self.mapping[tag]
+        for sensor_mapping in sensors:
+            identifier = "Unit|" + sensor_mapping.unit_id + \
+                         "|Sensor|" + sensor_mapping.sensor + \
+                         "." + sensor_mapping.measurement
+
+            measurement_node = self.server.get_node(identifier)
+            if measurement_node is not None:
+                await measurement_node.set_value(ua.Float(value))
+
+                sensor_node = await measurement_node.get_parent()
+                local_time_stamp = await sensor_node.get_child(
+                    str(self.server.get_namespace()) + ":" + "LocalTimestamp")
+                if local_time_stamp is not None:
+                    await local_time_stamp.set_value(ua.String(timestamp))
 
     @abc.abstractmethod
     def parse_config(self):
@@ -37,4 +52,3 @@ class BaseDriver(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def subscribe(self):
         pass
-
