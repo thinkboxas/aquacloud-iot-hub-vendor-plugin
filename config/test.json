@@ -1,0 +1,92 @@
+{
+      "type": "unit",
+      "unit_id": "unit_003",
+      "sensor_type": "OxygenSaturationSensorType",
+      "mapping": {
+        "OxygenSaturation": "site_001_unit_003_oxygen_saturation_1m",
+        "depth": "depth_1m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "OxygenSaturationSensorType",
+      "mapping": {
+        "OxygenSaturation": "site_001_unit_003_oxygen_saturation_5m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "OxygenConcentrationSensorType",
+      "mapping": {
+        "OxygenConcentration": "site_001_unit_003_oxygen_concentration_5m",
+        "Salinity": "site_001_salinity_5m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "TemperatureSensorType",
+      "mapping": {
+        "Temperature": "site_001_unit_003_temperature_5m"
+      }
+    },
+    {
+      "type": "site",
+      "unit_id": "",
+      "depth": 5,
+      "sensor_type": "SalinitySensorType",
+      "mapping": {
+        "Salinity": "site_001_unit_003_salinity_5m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "SeaCurrentSensorType",
+      "mapping": {
+        "Direction": "site_001_unit_003_direction_5m",
+        "Speed": "site_001_unit_003_speed_5m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "NTUSensorType",
+      "mapping": {
+        "NTU": "site_001_unit_003_ntu_5m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "FTUSensorType",
+      "mapping": {
+        "FTU": "site_001_unit_003_ftu_5m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "PHSensorType",
+      "mapping": {
+        "pH": "site_001_unit_003_ph_5m"
+      }
+    },
+    {
+      "type": "unit",
+      "unit_id": "unit_003",
+      "depth": 5,
+      "sensor_type": "LightSensorType",
+      "mapping": {
+        "Lux": "site_001_unit_003_lux_5m"
+      }
+    }

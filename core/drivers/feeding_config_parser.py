@@ -1,5 +1,4 @@
 import json
-import os
 
 from aquacloud_common.core.core_type import FeedingSensorType
 from aquacloud_common.models.organization.unit import UnitModel

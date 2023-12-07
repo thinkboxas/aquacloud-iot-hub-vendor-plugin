@@ -6,6 +6,13 @@ from core.opcua.nodes.feed_type_node import FeedTypeNode
 from utilities.opcua import update_external_references_node, update_position_node
 
 
+FEEDING_SENSOR_MODEL = [
+    "FeedingIntensitySensorModel",
+    "CalculatedAccumulatedFeedingSensorModel",
+    "FeedSiloSensorModel"
+]
+
+
 class BaseSensorNode(Base):
     def __init__(self, model: BaseSensorModel, ns: int, parent_node: Node, path: str = ""):
         super().__init__(model, ns, parent_node, model.name, path)
@@ -30,8 +37,8 @@ class BaseSensorNode(Base):
         await super().init()
 
         # update properties node:
-        await self.update_analog_item_variables_node()
-
+        await self.update_object_properties_node()
+        #
         # update analog item variables node:
         await self.update_analog_item_variables_node()
 
@@ -51,8 +58,12 @@ class BaseSensorNode(Base):
             await update_position_node(self.ns, position_node, self.model.position)
 
         # update FeedType if the sensor is feeding sensor:
-        feed_type_node = await self.node.get_child(str(self.ns) + ":" + "FeedType")
-        if feed_type_node is not None:
-            feed_type_node = FeedTypeNode(feed_type_node, self.model.feed_type)
-            await feed_type_node.update_variables_node()
+        if self.model.name in FEEDING_SENSOR_MODEL:
+            try:
+                feed_type_node = await self.node.get_child(str(self.ns) + ":" + "FeedType")
+                if feed_type_node is not None:
+                    feed_type_node = FeedTypeNode(feed_type_node, self.model.feed_type)
+                    await feed_type_node.update_variables_node()
+            except Exception as e:
+                print(e)
 

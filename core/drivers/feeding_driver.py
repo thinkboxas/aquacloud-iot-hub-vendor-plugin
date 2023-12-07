@@ -20,7 +20,7 @@ POLL_TIME_INTERVAL = int(os.getenv("TIME_INTERVAL", 3))
 
 class FeedingDriver(BaseDriver):
     def parse_config(self):
-        config_path_file = os.path.join(CONFIG_PATH, "config.json")
+        config_path_file = os.path.join(CONFIG_PATH, "feeding_config.json")
         config_parser = FeedingConfigurationParser(config_path_file)
         config_parser.parse_config_file()
         self.units = config_parser.create_units()
