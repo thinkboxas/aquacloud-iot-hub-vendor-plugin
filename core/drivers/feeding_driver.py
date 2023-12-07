@@ -1,5 +1,7 @@
+import asyncio
 import os
 import random
+import threading
 import time
 from datetime import datetime
 
@@ -13,7 +15,7 @@ from core.drivers.base_driver import BaseDriver
 from core.drivers.feeding_config_parser import FeedingConfigurationParser
 
 
-POLL_TIME_INTERVAL = int(os.getenv("TIME_INTERVAL", 600))
+POLL_TIME_INTERVAL = int(os.getenv("TIME_INTERVAL", 3))
 
 
 class FeedingDriver(BaseDriver):
@@ -53,16 +55,17 @@ class FeedingDriver(BaseDriver):
             await self._simulate_unit_feeding_sensor_data(unit)
 
     async def subscribe(self):
-        await self._poll_data()
-        # while self.is_starting is True:
-        #     await self._poll_data()
-        #     time.sleep(POLL_TIME_INTERVAL)
+        while self.is_starting is True:
+            await self._poll_data()
+            time.sleep(POLL_TIME_INTERVAL)
 
     async def start(self):
         self.is_starting = True
         self.parse_config()
         await self.create_unit_nodes()
-        await self.subscribe()
+
+        worker_thread = threading.Thread(target=asyncio.run, args=(self.subscribe(),))
+        worker_thread.start()
 
     def stop(self):
         self.is_starting = False

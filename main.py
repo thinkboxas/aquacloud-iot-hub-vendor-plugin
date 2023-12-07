@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.WARNING)
 async def start_opcua_server():
     xml_file_path = os.path.join("config", "AquaCloudStandardNodeSet.xml")
     async with OPCUAServer(
-            "opc.tcp://0.0.0.0:4842",
+            "opc.tcp://admin@127.0.0.1:4842",
             "AquaCloud Feeding Plugin",
             "http://aquacloud.iothub.thinkbox.no",
             xml_file_path
