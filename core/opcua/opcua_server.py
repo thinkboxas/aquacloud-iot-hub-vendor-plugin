@@ -4,6 +4,34 @@ from typing import Any
 from asyncua import Server, ua, Node
 from asyncua.ua import String, Int16, NodeId
 
+from aquacloud_common.models.sensor.base_sensor import BaseSensorModel
+from aquacloud_common.models.sensor.environment.ftu_sensor import FTUSensorModel
+from aquacloud_common.models.sensor.environment.light_sensor import LightSensorModel
+from aquacloud_common.models.sensor.environment.ntu_sensor import NTUSensorModel
+from aquacloud_common.models.sensor.environment.oxygen_concentration_sensor import OxygenConcentrationSensorModel
+from aquacloud_common.models.sensor.environment.oxygen_saturation_sensor import OxygenSaturationSensorModel
+from aquacloud_common.models.sensor.environment.ph_sensor import PHSensorModel
+from aquacloud_common.models.sensor.environment.salinity_sensor import SalinitySensorModel
+from aquacloud_common.models.sensor.environment.sea_current_sensor import SeaCurrentSensorModel
+from aquacloud_common.models.sensor.environment.temperature_sensor import TemperatureSensorModel
+from aquacloud_common.models.sensor.feeding.calculated_accumulated_feeding_sensor import \
+    CalculatedAccumulatedFeedingSensorModel
+from aquacloud_common.models.sensor.feeding.feed_silo_sensor import FeedSiloSensorModel
+from aquacloud_common.models.sensor.feeding.feeding_intensity_sensor import FeedingIntensitySensorModel
+from core.opcua.nodes.base_sensor_node import BaseSensorNode
+from core.opcua.nodes.calculated_accumulated_deeding_sensor_node import CalculatedAccumulatedFeedingSensorNode
+from core.opcua.nodes.feed_silo_sensor_node import FeedSiloSensorNode
+from core.opcua.nodes.feeding_intensity_sensor_node import FeedingIntensitySensorNode
+from core.opcua.nodes.ftu_sensor_node import FTUSensorNode
+from core.opcua.nodes.light_sensor_node import LightSensorNode
+from core.opcua.nodes.ntu_sensor_node import NTUSensorNode
+from core.opcua.nodes.oxygen_concentration_sensor_node import OxygenConcentrationSensorNode
+from core.opcua.nodes.oxygen_saturation_sensor_node import OxygenSaturationSensorNode
+from core.opcua.nodes.ph_sensor_node import PHSensorNode
+from core.opcua.nodes.salinity_sensor_node import SalinitySensorNode
+from core.opcua.nodes.sea_current_sensor_node import SeaCurrentSensorNode
+from core.opcua.nodes.temperature_sensor_node import TemperatureSensorNode
+
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
 
@@ -72,6 +100,50 @@ class OPCUAServer:
 
     def get_objects_node(self):
         return self._objects_node
+
+    @staticmethod
+    async def create_sensors(sensors_node: Node, sensors: list[BaseSensorModel], ns: int, identifier: str):
+        for sensor in sensors:
+            class_name = sensor.__class__
+            sensor_node = BaseSensorNode(sensor, ns, sensors_node, identifier)
+            if class_name == CalculatedAccumulatedFeedingSensorModel:
+                s = CalculatedAccumulatedFeedingSensorModel.model_validate(sensor.model_dump())
+                sensor_node = CalculatedAccumulatedFeedingSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == FeedingIntensitySensorModel:
+                s = FeedingIntensitySensorModel.model_validate(sensor.model_dump())
+                sensor_node = FeedingIntensitySensorNode(s, ns, sensors_node, identifier)
+            elif class_name == FeedSiloSensorModel:
+                s = FeedSiloSensorModel.model_validate(sensor.model_dump())
+                sensor_node = FeedSiloSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == OxygenSaturationSensorModel:
+                s = OxygenSaturationSensorModel.model_validate(sensor.model_dump())
+                sensor_node = OxygenSaturationSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == OxygenConcentrationSensorModel:
+                s = OxygenConcentrationSensorModel.model_validate(sensor.model_dump())
+                sensor_node = OxygenConcentrationSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == TemperatureSensorModel:
+                s = TemperatureSensorModel.model_validate(sensor.model_dump())
+                sensor_node = TemperatureSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == SalinitySensorModel:
+                s = SalinitySensorModel.model_validate(sensor.model_dump())
+                sensor_node = SalinitySensorNode(s, ns, sensors_node, identifier)
+            elif class_name == SeaCurrentSensorModel:
+                s = SeaCurrentSensorModel.model_validate(sensor.model_dump())
+                sensor_node = SeaCurrentSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == NTUSensorModel:
+                s = NTUSensorModel.model_validate(sensor.model_dump())
+                sensor_node = NTUSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == FTUSensorModel:
+                s = FTUSensorModel.model_validate(sensor.model_dump())
+                sensor_node = FTUSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == PHSensorModel:
+                s = PHSensorModel.model_validate(sensor.model_dump())
+                sensor_node = PHSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == LightSensorModel:
+                s = LightSensorModel.model_validate(sensor.model_dump())
+                sensor_node = LightSensorNode(s, ns, sensors_node, identifier)
+
+            await sensor_node.init()
 
 
 

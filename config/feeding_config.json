@@ -1,6 +1,7 @@
 {
   "sensors": [
     {
+      "type": "unit",
       "unit_id": "unit_001",
       "sensor_type": "FeedingIntensitySensorType",
       "mapping": {
@@ -8,6 +9,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_001",
       "sensor_type": "CalculatedAccumulatedFeedingSensorType",
       "mapping": {
@@ -15,6 +17,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_001",
       "sensor_type": "FeedSiloSensorType",
       "mapping": {
@@ -24,6 +27,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_002",
       "sensor_type": "FeedingIntensitySensorType",
       "mapping": {
@@ -31,6 +35,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_002",
       "sensor_type": "CalculatedAccumulatedFeedingSensorType",
       "mapping": {
@@ -38,6 +43,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_002",
       "sensor_type": "FeedSiloSensorType",
       "mapping": {
@@ -47,6 +53,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_003",
       "sensor_type": "FeedingIntensitySensorType",
       "mapping": {
@@ -54,6 +61,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_003",
       "sensor_type": "CalculatedAccumulatedFeedingSensorType",
       "mapping": {
@@ -61,6 +69,7 @@
       }
     },
     {
+      "type": "unit",
       "unit_id": "unit_003",
       "sensor_type": "FeedSiloSensorType",
       "mapping": {

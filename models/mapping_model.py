@@ -7,4 +7,4 @@ class MappingModel(BaseModel):
     unit_id: str
     sensor: str
     measurement: str
-    depth: Optional[str] = ""
+    depth: Optional[float] = 0

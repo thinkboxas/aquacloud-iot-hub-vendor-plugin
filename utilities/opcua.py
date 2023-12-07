@@ -1,5 +1,3 @@
-from typing import Union
-
 from asyncua import Node, ua
 
 from aquacloud_common.core.core_type import OrgNodeType

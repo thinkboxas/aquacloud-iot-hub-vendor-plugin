@@ -22,12 +22,19 @@ class Base(metaclass=abc.ABCMeta):
     ):
         self.model: AquaBaseModel = model
         self.ns: int = ns
-        self.identifier = self.__class__.__name__ + "|" + model.name
         self.parent_node = parent_node
         self._browser_name = browser_name
         self.node: Node | None = None
+
+        obj_type = self.__class__.__name__
+
+        if "Sensor" in self.__class__.__name__:
+            obj_type = "Sensor"
+
+        self.identifier = obj_type + "|" + model.name
+
         if path != "":
-            self.identifier = path + "|" + "Sensor" + "|" + model.name
+            self.identifier = path + "|" + obj_type + "|" + model.name
 
     @abc.abstractmethod
     async def update_object_properties_node(self):
