@@ -1,4 +1,5 @@
 import json
+import logging
 
 from aquacloud_common.core.core_type import EnvironmentSensorType
 from aquacloud_common.models.organization.unit import UnitModel
@@ -16,6 +17,10 @@ from models.mapping_model import MappingModel
 from models.sensor_model import SensorModel
 
 
+_logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.WARNING)
+
+
 class EnvironmentConfigurationParser:
     def __init__(self, config_file: str):
         self._config_file = config_file
@@ -28,7 +33,7 @@ class EnvironmentConfigurationParser:
                 config = json.load(json_file)
                 self._sensors = [SensorModel.model_validate(sensor) for sensor in config["sensors"]]
         except Exception as e:
-            print("Configuration file not found on disk!", e)
+            _logger.warning("Configuration file not found on disk!", e)
 
     def create_units(self) -> list[UnitModel]:
         units: dict[str, UnitModel] = {}

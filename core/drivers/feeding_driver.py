@@ -1,4 +1,5 @@
 import asyncio
+import logging
 import os
 import random
 import threading
@@ -13,6 +14,10 @@ from aquacloud_common.models.sensor.feeding.feeding_intensity_sensor import Feed
 from core.constants import CONFIG_PATH
 from core.drivers.base_driver import BaseDriver
 from core.drivers.feeding_config_parser import FeedingConfigurationParser
+
+
+_logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.WARNING)
 
 
 POLL_TIME_INTERVAL = int(os.getenv("TIME_INTERVAL", 3))
