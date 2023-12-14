@@ -11,7 +11,6 @@ from aquacloud_common.models.sensor.feeding.feeding_intensity_sensor import Feed
 from models.mapping_model import MappingModel
 from models.sensor_model import SensorModel
 
-
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
 
@@ -96,8 +95,14 @@ class FeedingConfigurationParser:
 
                 mapping[mapping_key].append(mapping_model)
 
+            # make default timestamp mapping
+            mapping_key = sensor.unit_id + ":" + "local_timestamp" + ":" + sensor_name
+            mapping[mapping_key] = [
+                MappingModel(
+                    unit_id=sensor.unit_id,
+                    sensor=sensor_name,
+                    measurement="LocalTimestamp"
+                )
+            ]
+
         return mapping
-
-
-
-

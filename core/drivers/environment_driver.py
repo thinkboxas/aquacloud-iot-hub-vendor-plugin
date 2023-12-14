@@ -82,6 +82,12 @@ class EnvironmentDriver(BaseDriver):
             tag = prefix_tag + "_lux" + ":" + sensor.name
             await self.on_data_change(tag, lux, timestamp)
 
+        if unit_id == "":
+            timestamp_tag = "site:" + "local_timestamp" + ":" + sensor.name
+        else:
+            timestamp_tag = unit_id + ":" + "local_timestamp" + ":" + sensor.name
+        await self.on_data_change(timestamp_tag, timestamp, timestamp)
+
     async def _simulate_site_env_sensor_data(self, timestamp: str):
         for sensor in self.sensors:
             await self._notify_data_change(sensor, timestamp)
