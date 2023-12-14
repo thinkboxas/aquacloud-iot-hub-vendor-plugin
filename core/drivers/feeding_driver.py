@@ -55,6 +55,9 @@ class FeedingDriver(BaseDriver):
                 tag = unit.id + ":" + unit.id + "_fill_percentage" + ":" + sensor.name
                 await self.on_data_change(tag, fill_percentage, timestamp)
 
+            timestamp_tag = unit.id + ":" + "local_timestamp" + ":" + sensor.name
+            await self.on_data_change(timestamp_tag, timestamp, timestamp)
+
     async def _poll_data(self):
         for unit in self.units:
             await self._simulate_unit_feeding_sensor_data(unit)

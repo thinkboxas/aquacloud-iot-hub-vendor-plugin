@@ -177,6 +177,19 @@ class EnvironmentConfigurationParser:
 
                 mapping[mapping_key].append(mapping_model)
 
+            # make default timestamp mapping
+            if sensor.type == "site":
+                mapping_key = "site:" + "local_timestamp" + ":" + sensor_name
+            else:
+                mapping_key = sensor.unit_id + ":" + "local_timestamp" + ":" + sensor_name
+            mapping[mapping_key] = [
+                MappingModel(
+                    unit_id=sensor.unit_id,
+                    sensor=sensor_name,
+                    measurement="LocalTimestamp"
+                )
+            ]
+
         return mapping
 
 
