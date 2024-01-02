@@ -1,4 +1,7 @@
+from typing import Any
+
 from asyncua import Node, ua
+from asyncua.ua import VariantType
 
 from aquacloud_common.core.core_type import OrgNodeType
 from aquacloud_common.models.common.external_reference import ExternalReferenceModel
@@ -110,3 +113,66 @@ def parse_eu_information(eu_information: EUInformation) -> ua.EUInformation:
         DisplayName=ua.LocalizedText(eu_information.display_name),
         Description=ua.LocalizedText(eu_information.description)
     )
+
+
+UNNECESSARY_SENSOR_PROPERTIES = [
+    "<GroupIdentifier>", "AssetId", "DeviceClass", "DeviceManual",
+    "DeviceRevision", "HardwareRevision", "Identification",
+    "Lock", "MethodSet", "ParameterSet", "ProductInstanceUri",
+    "RevisionCounter", "SoftwareRevision"
+]
+
+
+async def make_sensor_model_from_node(node: Node) -> Any:
+    obj = {}
+    node_class = await node.read_node_class()
+    name = await node.read_browse_name()
+
+    if node_class == ua.NodeClass.Variable:
+        value = await node.get_value()
+        data_type = await node.read_data_type_as_variant_type()
+
+        if value is not None:
+            if data_type == VariantType.LocalizedText or data_type == VariantType.String:
+                return value.__str__()
+            elif data_type == VariantType.Float:
+                return value.__float__()
+            elif data_type == VariantType.Variant:
+                obj["Value"] = value.__float__()
+            elif data_type == VariantType.ExtensionObject:
+                if name.Name == "EURange" or name.Name == "InstrumentRange":
+                    obj["Low"] = value.Low
+                    obj["High"] = value.High
+                elif name.Name == "EngineeringUnits":
+                    obj["NamespaceUri"] = value.NamespaceUri
+                    obj["UnitId"] = value.UnitId
+                    obj["DisplayName"] = value.DisplayName.__str__()
+                    obj["Description"] = value.Description.__str__()
+        else:
+            if data_type == VariantType.LocalizedText or data_type == VariantType.String:
+                return "N/A"
+            elif data_type == VariantType.Float:
+                return 0
+            elif data_type == VariantType.Variant:
+                obj["Value"] = 0
+            elif data_type == VariantType.ExtensionObject:
+                if name.Name == "EURange" or name.Name == "InstrumentRange":
+                    obj["Low"] = 0
+                    obj["High"] = 0
+                elif name.Name == "EngineeringUnits":
+                    obj["NamespaceUri"] = "N/A"
+                    obj["UnitId"] = 0
+                    obj["DisplayName"] = "N/A"
+                    obj["Description"] = "N/A"
+
+    children = await node.get_children()
+
+    if len(children) == 0 and name.Name == "ExternalReferences":
+        return []
+
+    for ch in children:
+        b_name = await ch.read_browse_name()
+        if b_name.Name not in UNNECESSARY_SENSOR_PROPERTIES:
+            obj[b_name.Name] = await make_sensor_model_from_node(ch)
+
+    return obj
