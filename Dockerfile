@@ -1,4 +1,4 @@
-FROM thinkboxas/aquacloud_common:v1-1.0.0
+FROM thinkboxas/aquacloud_common:v1-1.0.0.1
 WORKDIR /app/aquacloud-iot-hub-vendor-plugin
 COPY ./requirements.txt /app/aquacloud-iot-hub-vendor-plugin/requirements.txt
 RUN pip install -r requirements.txt
