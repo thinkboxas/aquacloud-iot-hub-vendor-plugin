@@ -9,11 +9,13 @@ from core.opcua.opcua_server import OPCUAServer
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
 
+ENDPOINT = os.getenv("ENDPOINT", "opc.tcp://127.0.0.1:4840")
+
 
 async def start_opcua_server():
     xml_file_path = os.path.join("config", "AquaCloudStandardNodeSet.xml")
     async with OPCUAServer(
-            "opc.tcp://admin@127.0.0.1:4843",
+            ENDPOINT,
             "AquaCloud Feeding Plugin",
             "http://aquacloud.iothub.thinkbox.no",
             xml_file_path
