@@ -2,7 +2,9 @@ import asyncio
 import logging
 import os
 
+from core.drivers.environment_driver import EnvironmentDriver
 from core.drivers.feeding_driver import FeedingDriver
+from core.drivers.opcua.opcua_driver import OpcuaDriver
 from core.opcua.opcua_server import OPCUAServer
 
 _logger = logging.getLogger(__name__)
@@ -19,8 +21,9 @@ async def start_opcua_server():
             "http://aquacloud.iothub.thinkbox.no",
             xml_file_path
     ) as opcua_server:
-        driver = FeedingDriver(opcua_server)
+        # driver = FeedingDriver(opcua_server)
         # driver = EnvironmentDriver(opcua_server)
+        driver = OpcuaDriver(opcua_server)
         await driver.start()
         await asyncio.sleep(10)
         while True:

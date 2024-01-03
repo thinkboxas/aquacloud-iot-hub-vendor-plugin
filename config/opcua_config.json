@@ -1,0 +1,151 @@
+{
+  "units": [
+    {
+      "unit_id": "unit_001",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.11:4840",
+        "username": "RasLab",
+        "password": "NanoRas_1!"
+      }
+    },
+    {
+      "unit_id": "unit_002",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.21:4840",
+        "username": "RasLab",
+        "password": "NanoRas_2!"
+      }
+    },
+    {
+      "unit_id": "unit_003",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.31:4840",
+        "username": "RasLab",
+        "password": "NanoRas_3!"
+      }
+    },
+    {
+      "unit_id": "unit_004",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.41:4840",
+        "username": "RasLab",
+        "password": "NanoRas_4!"
+      }
+    },
+    {
+      "unit_id": "unit_005",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.51:4840",
+        "username": "RasLab",
+        "password": "NanoRas_5!"
+      }
+    },
+    {
+      "unit_id": "unit_006",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.61:4840",
+        "username": "RasLab",
+        "password": "NanoRas_6!"
+      }
+    },
+    {
+      "unit_id": "unit_007",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.71:4840",
+        "username": "RasLab",
+        "password": "NanoRas_7!"
+      }
+    },
+    {
+      "unit_id": "unit_008",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.81:4840",
+        "username": "RasLab",
+        "password": "NanoRas_8!"
+      }
+    },
+    {
+      "unit_id": "unit_009",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.91:4840",
+        "username": "RasLab",
+        "password": "NanoRas_9!"
+      }
+    },
+    {
+      "unit_id": "unit_010",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.101:4840",
+        "username": "RasLab",
+        "password": "NanoRas_10!"
+      }
+    },
+    {
+      "unit_id": "unit_011",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.111:4840",
+        "username": "RasLab",
+        "password": "NanoRas_11!"
+      }
+    },
+    {
+      "unit_id": "unit_012",
+      "server": {
+        "endpoint": "opc.tcp://10.83.153.121:4840",
+        "username": "RasLab",
+        "password": "NanoRas_12!"
+      }
+    }
+  ],
+  "sensors": [
+      {
+        "sensor_type": "TemperatureSensorType",
+        "sensor_name": "TemperatureSensor_2",
+        "mapping": {
+          "Temperature": {"ns": 4,"i": 5}
+        }
+      },
+      {
+        "sensor_type": "TemperatureSensorType",
+        "sensor_name": "TemperatureSensor_1",
+        "mapping": {
+          "Temperature": {"ns": 4,"i": 6}
+        }
+      },
+      {
+        "sensor_type": "OxygenSaturationSensorType",
+        "sensor_name": "OxygenSaturationSensor_1",
+        "mapping": {
+          "OxygenSaturation": {"ns": 4,"i": 10}
+        }
+      },
+      {
+        "sensor_type": "OxygenSaturationSensorType",
+        "sensor_name": "OxygenSaturationSensor_2",
+        "mapping": {
+          "OxygenSaturation": {"ns": 4,"i": 9}
+        }
+      },
+      {
+        "sensor_type": "PHSensorType",
+        "sensor_name": "PHSensor_1",
+        "mapping": {
+          "OxygenSaturation": {"ns": 4,"i": 13}
+        }
+      },
+      {
+        "sensor_type": "PHSensorType",
+        "sensor_name": "PHSensor_2",
+        "mapping": {
+          "OxygenSaturation": {"ns": 4,"i": 14}
+        }
+      },
+      {
+        "sensor_type": "SalinitySensorType",
+        "sensor_name": "SalinitySensor_Tank",
+        "mapping": {
+          "OxygenSaturation": {"ns": 4,"i": 15}
+        }
+      }
+    ]
+}

@@ -75,5 +75,7 @@ class FeedingDriver(BaseDriver):
         worker_thread = threading.Thread(target=asyncio.run, args=(self.subscribe(),))
         worker_thread.start()
 
+        # asyncio.get_event_loop().create_task(self.subscribe())
+
     def stop(self):
         self.is_starting = False

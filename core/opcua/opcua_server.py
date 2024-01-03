@@ -1,8 +1,11 @@
 import logging
+import os
 from typing import Any
 
 from asyncua import Server, ua, Node
+from asyncua.crypto.permission_rules import SimpleRoleRuleset
 from asyncua.ua import String, Int16, NodeId
+from asyncua.server.users import UserRole, User
 
 from aquacloud_common.models.sensor.base_sensor import BaseSensorModel
 from aquacloud_common.models.sensor.environment.ftu_sensor import FTUSensorModel
@@ -32,8 +35,18 @@ from core.opcua.nodes.salinity_sensor_node import SalinitySensorNode
 from core.opcua.nodes.sea_current_sensor_node import SeaCurrentSensorNode
 from core.opcua.nodes.temperature_sensor_node import TemperatureSensorNode
 
+USERNAME = os.getenv("OPC_UA_USERNAME", "aquacloud")
+PASSWORD = os.getenv("OPC_UA_PASSWORD", "123456789")
+
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
+
+
+class UserManager:
+    def get_user(self, iserver, username=None, password=None, certificate=None):
+        if username == USERNAME and password == PASSWORD:
+            return User(role=UserRole.Admin)
+        return None
 
 
 class OPCUAServer:
@@ -44,7 +57,7 @@ class OPCUAServer:
             uri: str,
             xml_file_path: str
     ):
-        self._server: Server = Server()
+        self._server: Server = Server(user_manager=UserManager())
         self._xml_file_path: str = xml_file_path
         self._uri: str = uri
         self._ns: int = 2
@@ -52,13 +65,15 @@ class OPCUAServer:
         self._server.set_server_name(name)
         self._server.set_security_policy([
             ua.SecurityPolicyType.NoSecurity,
-            ua.SecurityPolicyType.Basic256Sha256_SignAndEncrypt,
-            ua.SecurityPolicyType.Basic256Sha256_Sign])
+            ua.SecurityPolicyType.Basic256Sha256_SignAndEncrypt
+        ])
+        self._server.set_security_IDs(["Username"])
 
         self._objects_node: Node = self._server.get_objects_node()
 
     async def init(self) -> bool:
         await self._server.init()
+        self._server.set_security_IDs(["Username"])
         self._ns = await self._server.register_namespace(self._uri)
         return await self._import_nodeset_from_xml_file(self._xml_file_path)
 
@@ -144,6 +159,3 @@ class OPCUAServer:
                 sensor_node = LightSensorNode(s, ns, sensors_node, identifier)
 
             await sensor_node.init()
-
-
-
