@@ -63,6 +63,7 @@ class OPCUAServer:
         self._server.set_endpoint(endpoint)
         self._server.set_server_name(name)
         self._server.set_security_policy([
+            ua.SecurityPolicyType.NoSecurity,
             ua.SecurityPolicyType.Basic256Sha256_SignAndEncrypt
         ])
         self._server.set_security_IDs(["Username"])
