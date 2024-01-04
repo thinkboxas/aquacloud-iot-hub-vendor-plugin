@@ -24,6 +24,6 @@ class EnvironmentSensorType:
     LIGHT_SENSOR = "LightSensorType"
 
 
-# CONFIG_PATH = '/opt/piscada-environment-vendor-plugin/config'
-CONFIG_PATH = 'config'
+CONFIG_PATH = '/opt/vendor-plugin/config'
+# CONFIG_PATH = 'config'
 FILES_PATH = 'files'
