@@ -35,7 +35,7 @@ class OpcuaDriver(BaseDriver):
         self.is_starting = True
         self.parse_config()
         await self.create_unit_nodes()
-        await self.create_sensors()
+        # await self.create_sensors()
 
         for server in self._servers:
             try:
