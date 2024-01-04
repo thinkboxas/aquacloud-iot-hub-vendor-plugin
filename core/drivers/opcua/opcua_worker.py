@@ -79,6 +79,7 @@ class OpcuaWorker:
 
             try:
                 self._client = Client(self._server.endpoint)
+                self._client.application_uri = client_app_uri
                 self._client.set_user(self._server.username)
                 self._client.set_password(self._server.password)
                 await self._client.set_security(
