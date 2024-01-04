@@ -14,8 +14,6 @@ from asyncua.crypto.security_policies import SecurityPolicyBasic256Sha256
 from asyncua.ua import String, Int16, Int32
 from cryptography.hazmat._oid import ExtendedKeyUsageOID
 
-from aquacloud_common.utilities.cetification_utils import cert_gen
-from constants import CONFIG_PATH
 from core.drivers.opcua.server_model import ServerModel
 from core.opcua.opcua_server import OPCUAServer
 from models.mapping_model import MappingModel
