@@ -61,7 +61,7 @@ class OpcuaWorker:
     async def run(self):
         while True:
             try:
-                self._client = Client(self._server.endpoint)
+                self._client = Client(url=self._server.endpoint, timeout=10)
                 self._client.application_uri = self._client_app_uri
                 self._client.set_user(self._server.username)
                 self._client.set_password(self._server.password)
