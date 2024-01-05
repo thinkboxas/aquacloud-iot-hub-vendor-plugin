@@ -1,18 +1,13 @@
 import asyncio
 import logging
-import os
-import socket
 import time
 from datetime import datetime
-from pathlib import Path
 from typing import Any
 
 from asyncua import Client, ua, Node
 from asyncua.common.subscription import Subscription, DataChangeNotif
-from asyncua.crypto.cert_gen import setup_self_signed_certificate
 from asyncua.crypto.security_policies import SecurityPolicyBasic256Sha256
 from asyncua.ua import String, Int16, Int32
-from cryptography.hazmat._oid import ExtendedKeyUsageOID
 
 from core.drivers.opcua.server_model import ServerModel
 from core.opcua.opcua_server import OPCUAServer
@@ -32,7 +27,10 @@ class OpcuaWorker:
             server: ServerModel,
             sensors: list[OpcSensorModel],
             mapping: dict[str, list[MappingModel]],
-            opc_server: OPCUAServer
+            opc_server: OPCUAServer,
+            cert: Any,
+            private_key: Any,
+            client_app_uri: str
     ):
         self._server: ServerModel = server
         self._opc_server = opc_server
@@ -42,6 +40,9 @@ class OpcuaWorker:
         self._client: Client = None
         self._subscription_nodes: list[Node] = []
         self._subscriber: Subscription = None
+        self._cert = cert
+        self._private_key = private_key
+        self._client_app_uri = client_app_uri
 
     async def subscribe(self):
         self._subscription_nodes.clear()
@@ -59,31 +60,15 @@ class OpcuaWorker:
 
     async def run(self):
         while True:
-            cert = Path(f"peer-certificate.der")
-            private_key = Path(f"peer-private-key.pem")
-            host_name = socket.gethostname()
-            client_app_uri = f"urn:{host_name}:aquacloud:myselfsignedclient"
-            await setup_self_signed_certificate(private_key,
-                                                cert,
-                                                client_app_uri,
-                                                host_name,
-                                                [ExtendedKeyUsageOID.CLIENT_AUTH],
-                                                {
-                                                    'countryName': 'NO',
-                                                    'stateOrProvinceName': 'N/A',
-                                                    'localityName': 'N/A',
-                                                    'organizationName': "AquaCloud",
-                                                })
-
             try:
                 self._client = Client(self._server.endpoint)
-                self._client.application_uri = client_app_uri
+                self._client.application_uri = self._client_app_uri
                 self._client.set_user(self._server.username)
                 self._client.set_password(self._server.password)
                 await self._client.set_security(
                     policy=SecurityPolicyBasic256Sha256,
-                    certificate=str(cert),
-                    private_key=str(private_key),
+                    certificate=str(self._cert),
+                    private_key=str(self._private_key),
                     mode=ua.MessageSecurityMode.SignAndEncrypt
                 )
                 async with self._client:
@@ -95,7 +80,7 @@ class OpcuaWorker:
                     while True:
                         await asyncio.sleep(5)
             except Exception as e:
-                _logger.warning(e)
+                _logger.warning("Cannot connect to opcua server", e)
             await asyncio.sleep(DISCOVERY_INTERVAL)
 
     async def _handle_data_change(self, node: Node, value: Any):
