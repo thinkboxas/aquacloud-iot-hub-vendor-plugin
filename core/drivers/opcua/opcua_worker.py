@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 import time
 from datetime import datetime
 from typing import Any
@@ -19,6 +20,7 @@ logging.basicConfig(level=logging.WARNING)
 
 RECONNECT_TIME_OUT = 5
 DISCOVERY_INTERVAL = 60 * 60
+TIME_OUT = int(os.getenv("TIME_OUT", 10))
 
 
 class OpcuaWorker:
@@ -61,7 +63,7 @@ class OpcuaWorker:
     async def run(self):
         while True:
             try:
-                self._client = Client(url=self._server.endpoint, timeout=10)
+                self._client = Client(url=self._server.endpoint, timeout=TIME_OUT)
                 self._client.application_uri = self._client_app_uri
                 self._client.set_user(self._server.username)
                 self._client.set_password(self._server.password)
