@@ -78,10 +78,11 @@ class OpcuaWorker:
                     except Exception as e:
                         _logger.warning(e)
                     while True:
-                        await asyncio.sleep(5)
+                        await self._client.check_connection()
+                        await asyncio.sleep(RECONNECT_TIME_OUT)
             except Exception as e:
                 _logger.warning("Cannot connect to opcua server", e)
-            await asyncio.sleep(DISCOVERY_INTERVAL)
+            await asyncio.sleep(RECONNECT_TIME_OUT)
 
     async def _handle_data_change(self, node: Node, value: Any):
         ns = self._opc_server.get_namespace()
