@@ -842,6 +842,7 @@
       <Reference ReferenceType="HasSubtype">ns=1;s=AquaCloud|NTUSensorType</Reference>
       <Reference ReferenceType="HasSubtype">ns=1;s=AquaCloud|FTUSensorType</Reference>
       <Reference ReferenceType="HasSubtype">ns=1;s=AquaCloud|PHSensorType</Reference>
+      <Reference ReferenceType="HasSubtype">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasSubtype">ns=1;s=AquaCloud|LightSensorType</Reference>
       <Reference ReferenceType="HasSubtype">ns=1;s=AquaCloud|FeedingIntensitySensorType</Reference>
       <Reference ReferenceType="HasSubtype">ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType</Reference>
@@ -5934,9 +5935,9 @@
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAObjectType NodeId="ns=1;s=AquaCloud|LightSensorType" BrowseName="0:LightSensorType">
-    <DisplayName>LightSensorType</DisplayName>
-    <Description>LightSensorType</Description>
+  <UAObjectType NodeId="ns=1;s=AquaCloud|CO2SensorType" BrowseName="0:CO2SensorType">
+    <DisplayName>CO2SensorType</DisplayName>
+    <Description>CO2SensorType</Description>
     <References>
       <Reference ReferenceType="HasSubtype" IsForward="false">ns=2;i=15063</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=216</Reference>
@@ -5948,56 +5949,56 @@
       <Reference ReferenceType="HasComponent">ns=1;i=227</Reference>
     </References>
   </UAObjectType>
-  <UAVariable NodeId="ns=1;i=216" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=216" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|CO2SensorType" DataType="String">
     <DisplayName>LocalTimestamp</DisplayName>
     <Description>LocalTimestamp</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=217" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="Float">
+  <UAVariable NodeId="ns=1;i=217" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|CO2SensorType" DataType="Float">
     <DisplayName>SampleRate</DisplayName>
     <Description>SampleRate</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=218" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=218" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|CO2SensorType" DataType="String">
     <DisplayName>LastMaintenance</DisplayName>
     <Description>LastMaintenance</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=219" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=219" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|CO2SensorType" DataType="String">
     <DisplayName>RawData</DisplayName>
     <Description>RawData</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=220" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|LightSensorType">
+  <UAObject NodeId="ns=1;i=220" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|CO2SensorType">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAObject NodeId="ns=1;i=221" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|LightSensorType">
+  <UAObject NodeId="ns=1;i=221" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|CO2SensorType">
     <DisplayName>Position</DisplayName>
     <Description>PositionType</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|PositionType</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=222</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=223</Reference>
@@ -6052,10 +6053,10 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=227" BrowseName="1:Lux" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" ValueRank="-2" DataType="Number" Historizing="true">
-    <DisplayName>Lux</DisplayName>
+  <UAVariable NodeId="ns=1;i=227" BrowseName="1:CO2" ParentNodeId="ns=1;s=AquaCloud|CO2SensorType" ValueRank="-2" DataType="Number" Historizing="true">
+    <DisplayName>CO2</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CO2SensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=228</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=229</Reference>
@@ -6103,9 +6104,9 @@
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAObjectType NodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" BrowseName="0:FeedingIntensitySensorType">
-    <DisplayName>FeedingIntensitySensorType</DisplayName>
-    <Description>FeedingIntensitySensorType</Description>
+  <UAObjectType NodeId="ns=1;s=AquaCloud|LightSensorType" BrowseName="0:LightSensorType">
+    <DisplayName>LightSensorType</DisplayName>
+    <Description>LightSensorType</Description>
     <References>
       <Reference ReferenceType="HasSubtype" IsForward="false">ns=2;i=15063</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=233</Reference>
@@ -6114,12 +6115,181 @@
       <Reference ReferenceType="HasComponent">ns=1;i=236</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=237</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=238</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=239</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=245</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=244</Reference>
     </References>
   </UAObjectType>
-  <UAVariable NodeId="ns=1;i=233" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=233" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="String">
+    <DisplayName>LocalTimestamp</DisplayName>
+    <Description>LocalTimestamp</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=234" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="Float">
+    <DisplayName>SampleRate</DisplayName>
+    <Description>SampleRate</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=235" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="String">
+    <DisplayName>LastMaintenance</DisplayName>
+    <Description>LastMaintenance</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=236" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" DataType="String">
+    <DisplayName>RawData</DisplayName>
+    <Description>RawData</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=237" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|LightSensorType">
+    <DisplayName>ExternalReferences</DisplayName>
+    <Description>ExternalReferenceSetType</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=238" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|LightSensorType">
+    <DisplayName>Position</DisplayName>
+    <Description>PositionType</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|PositionType</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=239</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=240</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=241</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=242</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=243</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=239" BrowseName="1:EffectiveRange" ParentNodeId="ns=1;i=238" DataType="Float">
+    <DisplayName>EffectiveRange</DisplayName>
+    <Description>EffectiveRange</Description>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=238</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=240" BrowseName="1:Latitude" ParentNodeId="ns=1;i=238" DataType="Float">
+    <DisplayName>Latitude</DisplayName>
+    <Description>Latitude</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=238</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=241" BrowseName="1:Longitude" ParentNodeId="ns=1;i=238" DataType="Float">
+    <DisplayName>Longitude</DisplayName>
+    <Description>Longitude</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=238</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=242" BrowseName="1:Depth" ParentNodeId="ns=1;i=238" DataType="Float">
+    <DisplayName>Depth</DisplayName>
+    <Description>Depth</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=238</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=243" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=238">
+    <DisplayName>ExternalReferences</DisplayName>
+    <Description>ExternalReferenceSetType</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=238</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=244" BrowseName="1:Lux" ParentNodeId="ns=1;s=AquaCloud|LightSensorType" ValueRank="-2" DataType="Number" Historizing="true">
+    <DisplayName>Lux</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|LightSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=245</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=246</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=247</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=248</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=249</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=245" BrowseName="0:EURange" ParentNodeId="ns=1;i=244" DataType="Range" Historizing="true">
+    <DisplayName>EURange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=244</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=246" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=244" DataType="Range" Historizing="true">
+    <DisplayName>InstrumentRange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=244</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=247" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=244" DataType="EUInformation" Historizing="true">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=244</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=248" BrowseName="0:Definition" ParentNodeId="ns=1;i=244" DataType="String" Historizing="true">
+    <DisplayName>Definition</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=244</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=249" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=244" DataType="Double" Historizing="true">
+    <DisplayName>ValuePrecision</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=244</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAObjectType NodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" BrowseName="0:FeedingIntensitySensorType">
+    <DisplayName>FeedingIntensitySensorType</DisplayName>
+    <Description>FeedingIntensitySensorType</Description>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">ns=2;i=15063</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=250</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=252</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=253</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=254</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=255</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=256</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=262</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=268</Reference>
+    </References>
+  </UAObjectType>
+  <UAVariable NodeId="ns=1;i=250" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
     <DisplayName>LocalTimestamp</DisplayName>
     <Description>LocalTimestamp</Description>
     <References>
@@ -6128,7 +6298,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=234" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="Float">
+  <UAVariable NodeId="ns=1;i=251" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="Float">
     <DisplayName>SampleRate</DisplayName>
     <Description>SampleRate</Description>
     <References>
@@ -6137,7 +6307,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=235" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=252" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
     <DisplayName>LastMaintenance</DisplayName>
     <Description>LastMaintenance</Description>
     <References>
@@ -6146,7 +6316,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=236" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=253" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
     <DisplayName>RawData</DisplayName>
     <Description>RawData</Description>
     <References>
@@ -6155,7 +6325,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=237" BrowseName="1:SourceSilo" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=254" BrowseName="1:SourceSilo" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" DataType="String">
     <DisplayName>SourceSilo</DisplayName>
     <Description>SourceSilo</Description>
     <References>
@@ -6164,7 +6334,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=238" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType">
+  <UAObject NodeId="ns=1;i=255" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
@@ -6173,233 +6343,233 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAObject NodeId="ns=1;i=239" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType">
+  <UAObject NodeId="ns=1;i=256" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType">
     <DisplayName>Position</DisplayName>
     <Description>PositionType</Description>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedingIntensitySensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|PositionType</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=240</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=241</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=242</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=243</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=244</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=257</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=258</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=259</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=260</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=261</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=240" BrowseName="1:EffectiveRange" ParentNodeId="ns=1;i=239" DataType="Float">
+  <UAVariable NodeId="ns=1;i=257" BrowseName="1:EffectiveRange" ParentNodeId="ns=1;i=256" DataType="Float">
     <DisplayName>EffectiveRange</DisplayName>
     <Description>EffectiveRange</Description>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=239</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=256</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=241" BrowseName="1:Latitude" ParentNodeId="ns=1;i=239" DataType="Float">
+  <UAVariable NodeId="ns=1;i=258" BrowseName="1:Latitude" ParentNodeId="ns=1;i=256" DataType="Float">
     <DisplayName>Latitude</DisplayName>
     <Description>Latitude</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=239</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=256</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=242" BrowseName="1:Longitude" ParentNodeId="ns=1;i=239" DataType="Float">
+  <UAVariable NodeId="ns=1;i=259" BrowseName="1:Longitude" ParentNodeId="ns=1;i=256" DataType="Float">
     <DisplayName>Longitude</DisplayName>
     <Description>Longitude</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=239</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=256</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=243" BrowseName="1:Depth" ParentNodeId="ns=1;i=239" DataType="Float">
+  <UAVariable NodeId="ns=1;i=260" BrowseName="1:Depth" ParentNodeId="ns=1;i=256" DataType="Float">
     <DisplayName>Depth</DisplayName>
     <Description>Depth</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=239</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=256</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=244" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=239">
+  <UAObject NodeId="ns=1;i=261" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=256">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=239</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=256</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=245" BrowseName="1:FeedingIntensity" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=262" BrowseName="1:FeedingIntensity" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>FeedingIntensity</DisplayName>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedingIntensitySensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=246</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=247</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=248</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=249</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=250</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=263</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=264</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=265</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=266</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=267</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=246" BrowseName="0:EURange" ParentNodeId="ns=1;i=245" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=263" BrowseName="0:EURange" ParentNodeId="ns=1;i=262" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=245</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=262</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=247" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=245" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=264" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=262" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=245</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=262</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=248" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=245" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=265" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=262" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=245</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=262</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=249" BrowseName="0:Definition" ParentNodeId="ns=1;i=245" DataType="String" Historizing="true">
+  <UAVariable NodeId="ns=1;i=266" BrowseName="0:Definition" ParentNodeId="ns=1;i=262" DataType="String" Historizing="true">
     <DisplayName>Definition</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=245</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=262</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=250" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=245" DataType="Double" Historizing="true">
+  <UAVariable NodeId="ns=1;i=267" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=262" DataType="Double" Historizing="true">
     <DisplayName>ValuePrecision</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=245</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=262</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=251" BrowseName="1:FeedType" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType">
+  <UAObject NodeId="ns=1;i=268" BrowseName="1:FeedType" ParentNodeId="ns=1;s=AquaCloud|FeedingIntensitySensorType">
     <DisplayName>FeedType</DisplayName>
     <Description>FeedType</Description>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedingIntensitySensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|FeedType</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=252</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=253</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=254</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=255</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=256</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=260</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=269</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=270</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=271</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=272</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=273</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=277</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=252" BrowseName="1:Manufacturer" ParentNodeId="ns=1;i=251" DataType="String">
+  <UAVariable NodeId="ns=1;i=269" BrowseName="1:Manufacturer" ParentNodeId="ns=1;i=268" DataType="String">
     <DisplayName>Manufacturer</DisplayName>
     <Description>Manufacturer</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=268</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=253" BrowseName="1:ProductCode" ParentNodeId="ns=1;i=251" DataType="String">
+  <UAVariable NodeId="ns=1;i=270" BrowseName="1:ProductCode" ParentNodeId="ns=1;i=268" DataType="String">
     <DisplayName>ProductCode</DisplayName>
     <Description>ProductCode</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=268</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=254" BrowseName="1:PurchaseNumber" ParentNodeId="ns=1;i=251" DataType="String">
+  <UAVariable NodeId="ns=1;i=271" BrowseName="1:PurchaseNumber" ParentNodeId="ns=1;i=268" DataType="String">
     <DisplayName>PurchaseNumber</DisplayName>
     <Description>PurchaseNumber</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=268</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=255" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=251">
+  <UAObject NodeId="ns=1;i=272" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=268">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=268</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=256" BrowseName="1:PelletSize" ParentNodeId="ns=1;i=251" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=273" BrowseName="1:PelletSize" ParentNodeId="ns=1;i=268" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>PelletSize</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=268</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=257</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=258</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=259</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=274</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=275</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=276</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=257" BrowseName="0:EURange" ParentNodeId="ns=1;i=256" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=274" BrowseName="0:EURange" ParentNodeId="ns=1;i=273" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=256</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=273</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=258" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=256" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=275" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=273" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=256</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=273</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=259" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=256" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=276" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=273" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=256</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=273</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=260" BrowseName="1:MassPerPellet" ParentNodeId="ns=1;i=251" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=277" BrowseName="1:MassPerPellet" ParentNodeId="ns=1;i=268" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>MassPerPellet</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=251</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=268</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=261</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=262</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=263</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=278</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=279</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=280</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=261" BrowseName="0:EURange" ParentNodeId="ns=1;i=260" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=278" BrowseName="0:EURange" ParentNodeId="ns=1;i=277" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=260</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=277</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=262" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=260" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=279" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=277" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=260</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=277</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=263" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=260" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=280" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=277" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=260</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=277</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
@@ -6409,18 +6579,18 @@
     <Description>CalculatedAccumulatedFeedingSensorType</Description>
     <References>
       <Reference ReferenceType="HasSubtype" IsForward="false">ns=2;i=15063</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=264</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=265</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=266</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=267</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=268</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=269</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=270</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=276</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=281</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=282</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=283</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=284</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=285</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=286</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=287</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=293</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=299</Reference>
     </References>
   </UAObjectType>
-  <UAVariable NodeId="ns=1;i=264" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=281" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
     <DisplayName>LocalTimestamp</DisplayName>
     <Description>LocalTimestamp</Description>
     <References>
@@ -6429,7 +6599,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=265" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="Float">
+  <UAVariable NodeId="ns=1;i=282" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="Float">
     <DisplayName>SampleRate</DisplayName>
     <Description>SampleRate</Description>
     <References>
@@ -6438,7 +6608,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=266" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=283" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
     <DisplayName>LastMaintenance</DisplayName>
     <Description>LastMaintenance</Description>
     <References>
@@ -6447,7 +6617,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=267" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=284" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
     <DisplayName>RawData</DisplayName>
     <Description>RawData</Description>
     <References>
@@ -6456,7 +6626,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=268" BrowseName="1:SourceSilo" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=285" BrowseName="1:SourceSilo" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" DataType="String">
     <DisplayName>SourceSilo</DisplayName>
     <Description>SourceSilo</Description>
     <References>
@@ -6465,7 +6635,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=269" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType">
+  <UAObject NodeId="ns=1;i=286" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
@@ -6474,233 +6644,233 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAObject NodeId="ns=1;i=270" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType">
+  <UAObject NodeId="ns=1;i=287" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType">
     <DisplayName>Position</DisplayName>
     <Description>PositionType</Description>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|PositionType</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=271</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=272</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=273</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=274</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=275</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=288</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=289</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=290</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=291</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=292</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=271" BrowseName="1:EffectiveRange" ParentNodeId="ns=1;i=270" DataType="Float">
+  <UAVariable NodeId="ns=1;i=288" BrowseName="1:EffectiveRange" ParentNodeId="ns=1;i=287" DataType="Float">
     <DisplayName>EffectiveRange</DisplayName>
     <Description>EffectiveRange</Description>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=270</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=287</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=272" BrowseName="1:Latitude" ParentNodeId="ns=1;i=270" DataType="Float">
+  <UAVariable NodeId="ns=1;i=289" BrowseName="1:Latitude" ParentNodeId="ns=1;i=287" DataType="Float">
     <DisplayName>Latitude</DisplayName>
     <Description>Latitude</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=270</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=287</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=273" BrowseName="1:Longitude" ParentNodeId="ns=1;i=270" DataType="Float">
+  <UAVariable NodeId="ns=1;i=290" BrowseName="1:Longitude" ParentNodeId="ns=1;i=287" DataType="Float">
     <DisplayName>Longitude</DisplayName>
     <Description>Longitude</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=270</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=287</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=274" BrowseName="1:Depth" ParentNodeId="ns=1;i=270" DataType="Float">
+  <UAVariable NodeId="ns=1;i=291" BrowseName="1:Depth" ParentNodeId="ns=1;i=287" DataType="Float">
     <DisplayName>Depth</DisplayName>
     <Description>Depth</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=270</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=287</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=275" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=270">
+  <UAObject NodeId="ns=1;i=292" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=287">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=270</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=287</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=276" BrowseName="1:FedAmount" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=293" BrowseName="1:FedAmount" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>FedAmount</DisplayName>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=277</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=278</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=279</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=280</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=281</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=294</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=295</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=296</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=297</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=298</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=277" BrowseName="0:EURange" ParentNodeId="ns=1;i=276" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=294" BrowseName="0:EURange" ParentNodeId="ns=1;i=293" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=276</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=293</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=278" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=276" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=295" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=293" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=276</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=293</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=279" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=276" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=296" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=293" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=276</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=293</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=280" BrowseName="0:Definition" ParentNodeId="ns=1;i=276" DataType="String" Historizing="true">
+  <UAVariable NodeId="ns=1;i=297" BrowseName="0:Definition" ParentNodeId="ns=1;i=293" DataType="String" Historizing="true">
     <DisplayName>Definition</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=276</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=293</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=281" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=276" DataType="Double" Historizing="true">
+  <UAVariable NodeId="ns=1;i=298" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=293" DataType="Double" Historizing="true">
     <DisplayName>ValuePrecision</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=276</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=293</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=282" BrowseName="1:FeedType" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType">
+  <UAObject NodeId="ns=1;i=299" BrowseName="1:FeedType" ParentNodeId="ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType">
     <DisplayName>FeedType</DisplayName>
     <Description>FeedType</Description>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|CalculatedAccumulatedFeedingSensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|FeedType</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=283</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=284</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=285</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=286</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=287</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=291</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=300</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=301</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=302</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=303</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=304</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=308</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=283" BrowseName="1:Manufacturer" ParentNodeId="ns=1;i=282" DataType="String">
+  <UAVariable NodeId="ns=1;i=300" BrowseName="1:Manufacturer" ParentNodeId="ns=1;i=299" DataType="String">
     <DisplayName>Manufacturer</DisplayName>
     <Description>Manufacturer</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=282</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=299</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=284" BrowseName="1:ProductCode" ParentNodeId="ns=1;i=282" DataType="String">
+  <UAVariable NodeId="ns=1;i=301" BrowseName="1:ProductCode" ParentNodeId="ns=1;i=299" DataType="String">
     <DisplayName>ProductCode</DisplayName>
     <Description>ProductCode</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=282</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=299</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=285" BrowseName="1:PurchaseNumber" ParentNodeId="ns=1;i=282" DataType="String">
+  <UAVariable NodeId="ns=1;i=302" BrowseName="1:PurchaseNumber" ParentNodeId="ns=1;i=299" DataType="String">
     <DisplayName>PurchaseNumber</DisplayName>
     <Description>PurchaseNumber</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=282</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=299</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=286" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=282">
+  <UAObject NodeId="ns=1;i=303" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=299">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=282</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=299</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=287" BrowseName="1:PelletSize" ParentNodeId="ns=1;i=282" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=304" BrowseName="1:PelletSize" ParentNodeId="ns=1;i=299" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>PelletSize</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=282</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=299</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=288</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=289</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=290</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=305</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=306</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=307</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=288" BrowseName="0:EURange" ParentNodeId="ns=1;i=287" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=305" BrowseName="0:EURange" ParentNodeId="ns=1;i=304" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=287</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=304</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=289" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=287" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=306" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=304" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=287</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=304</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=290" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=287" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=307" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=304" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=287</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=304</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=291" BrowseName="1:MassPerPellet" ParentNodeId="ns=1;i=282" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=308" BrowseName="1:MassPerPellet" ParentNodeId="ns=1;i=299" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>MassPerPellet</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=282</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=299</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=292</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=293</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=294</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=309</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=310</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=311</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=292" BrowseName="0:EURange" ParentNodeId="ns=1;i=291" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=309" BrowseName="0:EURange" ParentNodeId="ns=1;i=308" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=291</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=308</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=293" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=291" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=310" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=308" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=291</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=308</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=294" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=291" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=311" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=308" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=291</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=308</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
@@ -6710,20 +6880,20 @@
     <Description>FeedSiloSensorType</Description>
     <References>
       <Reference ReferenceType="HasSubtype" IsForward="false">ns=2;i=15063</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=295</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=296</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=297</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=298</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=299</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=300</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=301</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=307</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=312</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=313</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=319</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=325</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=314</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=315</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=316</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=317</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=318</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=324</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=330</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=336</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=342</Reference>
     </References>
   </UAObjectType>
-  <UAVariable NodeId="ns=1;i=295" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=312" BrowseName="1:LocalTimestamp" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
     <DisplayName>LocalTimestamp</DisplayName>
     <Description>LocalTimestamp</Description>
     <References>
@@ -6732,7 +6902,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=296" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="Float">
+  <UAVariable NodeId="ns=1;i=313" BrowseName="1:SampleRate" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="Float">
     <DisplayName>SampleRate</DisplayName>
     <Description>SampleRate</Description>
     <References>
@@ -6741,7 +6911,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=297" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=314" BrowseName="1:LastMaintenance" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
     <DisplayName>LastMaintenance</DisplayName>
     <Description>LastMaintenance</Description>
     <References>
@@ -6750,7 +6920,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=298" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=315" BrowseName="1:RawData" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
     <DisplayName>RawData</DisplayName>
     <Description>RawData</Description>
     <References>
@@ -6759,7 +6929,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=299" BrowseName="1:SiloID" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
+  <UAVariable NodeId="ns=1;i=316" BrowseName="1:SiloID" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" DataType="String">
     <DisplayName>SiloID</DisplayName>
     <Description>SiloID</Description>
     <References>
@@ -6768,7 +6938,7 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=300" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType">
+  <UAObject NodeId="ns=1;i=317" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
@@ -6777,277 +6947,126 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAObject NodeId="ns=1;i=301" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType">
+  <UAObject NodeId="ns=1;i=318" BrowseName="1:Position" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType">
     <DisplayName>Position</DisplayName>
     <Description>PositionType</Description>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedSiloSensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|PositionType</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=302</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=303</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=304</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=305</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=306</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=319</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=320</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=321</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=322</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=323</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=302" BrowseName="1:EffectiveRange" ParentNodeId="ns=1;i=301" DataType="Float">
+  <UAVariable NodeId="ns=1;i=319" BrowseName="1:EffectiveRange" ParentNodeId="ns=1;i=318" DataType="Float">
     <DisplayName>EffectiveRange</DisplayName>
     <Description>EffectiveRange</Description>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=301</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=318</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=303" BrowseName="1:Latitude" ParentNodeId="ns=1;i=301" DataType="Float">
+  <UAVariable NodeId="ns=1;i=320" BrowseName="1:Latitude" ParentNodeId="ns=1;i=318" DataType="Float">
     <DisplayName>Latitude</DisplayName>
     <Description>Latitude</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=301</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=318</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=304" BrowseName="1:Longitude" ParentNodeId="ns=1;i=301" DataType="Float">
+  <UAVariable NodeId="ns=1;i=321" BrowseName="1:Longitude" ParentNodeId="ns=1;i=318" DataType="Float">
     <DisplayName>Longitude</DisplayName>
     <Description>Longitude</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=301</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=318</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=305" BrowseName="1:Depth" ParentNodeId="ns=1;i=301" DataType="Float">
+  <UAVariable NodeId="ns=1;i=322" BrowseName="1:Depth" ParentNodeId="ns=1;i=318" DataType="Float">
     <DisplayName>Depth</DisplayName>
     <Description>Depth</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=301</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=318</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=306" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=301">
+  <UAObject NodeId="ns=1;i=323" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=318">
     <DisplayName>ExternalReferences</DisplayName>
     <Description>ExternalReferenceSetType</Description>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=301</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=318</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=307" BrowseName="1:Feed" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=324" BrowseName="1:Feed" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>Feed</DisplayName>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedSiloSensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=308</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=309</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=310</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=311</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=312</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=325</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=326</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=327</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=328</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=329</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=308" BrowseName="0:EURange" ParentNodeId="ns=1;i=307" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=325" BrowseName="0:EURange" ParentNodeId="ns=1;i=324" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=307</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=324</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=309" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=307" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=326" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=324" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=307</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=324</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=310" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=307" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=327" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=324" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=307</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=324</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=311" BrowseName="0:Definition" ParentNodeId="ns=1;i=307" DataType="String" Historizing="true">
+  <UAVariable NodeId="ns=1;i=328" BrowseName="0:Definition" ParentNodeId="ns=1;i=324" DataType="String" Historizing="true">
     <DisplayName>Definition</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=307</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=324</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=312" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=307" DataType="Double" Historizing="true">
+  <UAVariable NodeId="ns=1;i=329" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=324" DataType="Double" Historizing="true">
     <DisplayName>ValuePrecision</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=307</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=324</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=313" BrowseName="1:SiloCapacity" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" ValueRank="-2" DataType="Number" Historizing="true">
+  <UAVariable NodeId="ns=1;i=330" BrowseName="1:SiloCapacity" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" ValueRank="-2" DataType="Number" Historizing="true">
     <DisplayName>SiloCapacity</DisplayName>
     <References>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedSiloSensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=314</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=315</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=316</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=317</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=318</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=314" BrowseName="0:EURange" ParentNodeId="ns=1;i=313" DataType="Range" Historizing="true">
-    <DisplayName>EURange</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=313</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=315" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=313" DataType="Range" Historizing="true">
-    <DisplayName>InstrumentRange</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=313</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=316" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=313" DataType="EUInformation" Historizing="true">
-    <DisplayName>EngineeringUnits</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=313</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=317" BrowseName="0:Definition" ParentNodeId="ns=1;i=313" DataType="String" Historizing="true">
-    <DisplayName>Definition</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=313</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=318" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=313" DataType="Double" Historizing="true">
-    <DisplayName>ValuePrecision</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=313</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=319" BrowseName="1:FillPercentage" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" ValueRank="-2" DataType="Number" Historizing="true">
-    <DisplayName>FillPercentage</DisplayName>
-    <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedSiloSensorType</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=320</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=321</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=322</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=323</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=324</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=320" BrowseName="0:EURange" ParentNodeId="ns=1;i=319" DataType="Range" Historizing="true">
-    <DisplayName>EURange</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=319</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=321" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=319" DataType="Range" Historizing="true">
-    <DisplayName>InstrumentRange</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=319</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=322" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=319" DataType="EUInformation" Historizing="true">
-    <DisplayName>EngineeringUnits</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=319</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=323" BrowseName="0:Definition" ParentNodeId="ns=1;i=319" DataType="String" Historizing="true">
-    <DisplayName>Definition</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=319</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=324" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=319" DataType="Double" Historizing="true">
-    <DisplayName>ValuePrecision</DisplayName>
-    <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=319</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-    </References>
-  </UAVariable>
-  <UAObject NodeId="ns=1;i=325" BrowseName="1:FeedType" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType">
-    <DisplayName>FeedType</DisplayName>
-    <Description>FeedType</Description>
-    <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedSiloSensorType</Reference>
-      <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|FeedType</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=326</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=327</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=328</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=329</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=330</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=334</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAObject>
-  <UAVariable NodeId="ns=1;i=326" BrowseName="1:Manufacturer" ParentNodeId="ns=1;i=325" DataType="String">
-    <DisplayName>Manufacturer</DisplayName>
-    <Description>Manufacturer</Description>
-    <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=325</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=327" BrowseName="1:ProductCode" ParentNodeId="ns=1;i=325" DataType="String">
-    <DisplayName>ProductCode</DisplayName>
-    <Description>ProductCode</Description>
-    <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=325</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAVariable NodeId="ns=1;i=328" BrowseName="1:PurchaseNumber" ParentNodeId="ns=1;i=325" DataType="String">
-    <DisplayName>PurchaseNumber</DisplayName>
-    <Description>PurchaseNumber</Description>
-    <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=325</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAVariable>
-  <UAObject NodeId="ns=1;i=329" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=325">
-    <DisplayName>ExternalReferences</DisplayName>
-    <Description>ExternalReferenceSetType</Description>
-    <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=325</Reference>
-      <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
-      <Reference ReferenceType="HasModellingRule">i=78</Reference>
-    </References>
-  </UAObject>
-  <UAVariable NodeId="ns=1;i=330" BrowseName="1:PelletSize" ParentNodeId="ns=1;i=325" ValueRank="-2" DataType="Number" Historizing="true">
-    <DisplayName>PelletSize</DisplayName>
-    <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=325</Reference>
-      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=331</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=332</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=333</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=334</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=335</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
@@ -7075,37 +7094,188 @@
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=334" BrowseName="1:MassPerPellet" ParentNodeId="ns=1;i=325" ValueRank="-2" DataType="Number" Historizing="true">
-    <DisplayName>MassPerPellet</DisplayName>
+  <UAVariable NodeId="ns=1;i=334" BrowseName="0:Definition" ParentNodeId="ns=1;i=330" DataType="String" Historizing="true">
+    <DisplayName>Definition</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=325</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=330</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=335" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=330" DataType="Double" Historizing="true">
+    <DisplayName>ValuePrecision</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=330</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=336" BrowseName="1:FillPercentage" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType" ValueRank="-2" DataType="Number" Historizing="true">
+    <DisplayName>FillPercentage</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedSiloSensorType</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=335</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=336</Reference>
       <Reference ReferenceType="HasProperty">ns=1;i=337</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=338</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=339</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=340</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=341</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=335" BrowseName="0:EURange" ParentNodeId="ns=1;i=334" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=337" BrowseName="0:EURange" ParentNodeId="ns=1;i=336" DataType="Range" Historizing="true">
     <DisplayName>EURange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=334</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=336</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=336" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=334" DataType="Range" Historizing="true">
+  <UAVariable NodeId="ns=1;i=338" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=336" DataType="Range" Historizing="true">
     <DisplayName>InstrumentRange</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=334</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=336</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=337" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=334" DataType="EUInformation" Historizing="true">
+  <UAVariable NodeId="ns=1;i=339" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=336" DataType="EUInformation" Historizing="true">
     <DisplayName>EngineeringUnits</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=334</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=336</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=340" BrowseName="0:Definition" ParentNodeId="ns=1;i=336" DataType="String" Historizing="true">
+    <DisplayName>Definition</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=336</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=341" BrowseName="0:ValuePrecision" ParentNodeId="ns=1;i=336" DataType="Double" Historizing="true">
+    <DisplayName>ValuePrecision</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=336</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=342" BrowseName="1:FeedType" ParentNodeId="ns=1;s=AquaCloud|FeedSiloSensorType">
+    <DisplayName>FeedType</DisplayName>
+    <Description>FeedType</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;s=AquaCloud|FeedSiloSensorType</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|FeedType</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=343</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=344</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=345</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=346</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=347</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=351</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=343" BrowseName="1:Manufacturer" ParentNodeId="ns=1;i=342" DataType="String">
+    <DisplayName>Manufacturer</DisplayName>
+    <Description>Manufacturer</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=342</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=344" BrowseName="1:ProductCode" ParentNodeId="ns=1;i=342" DataType="String">
+    <DisplayName>ProductCode</DisplayName>
+    <Description>ProductCode</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=342</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=345" BrowseName="1:PurchaseNumber" ParentNodeId="ns=1;i=342" DataType="String">
+    <DisplayName>PurchaseNumber</DisplayName>
+    <Description>PurchaseNumber</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=342</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=346" BrowseName="1:ExternalReferences" ParentNodeId="ns=1;i=342">
+    <DisplayName>ExternalReferences</DisplayName>
+    <Description>ExternalReferenceSetType</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=342</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;s=AquaCloud|ExternalReferenceSetType</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=347" BrowseName="1:PelletSize" ParentNodeId="ns=1;i=342" ValueRank="-2" DataType="Number" Historizing="true">
+    <DisplayName>PelletSize</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=342</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=348</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=349</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=350</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=348" BrowseName="0:EURange" ParentNodeId="ns=1;i=347" DataType="Range" Historizing="true">
+    <DisplayName>EURange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=347</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=349" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=347" DataType="Range" Historizing="true">
+    <DisplayName>InstrumentRange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=347</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=350" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=347" DataType="EUInformation" Historizing="true">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=347</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=351" BrowseName="1:MassPerPellet" ParentNodeId="ns=1;i=342" ValueRank="-2" DataType="Number" Historizing="true">
+    <DisplayName>MassPerPellet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=342</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=352</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=353</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=354</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=352" BrowseName="0:EURange" ParentNodeId="ns=1;i=351" DataType="Range" Historizing="true">
+    <DisplayName>EURange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=351</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=353" BrowseName="0:InstrumentRange" ParentNodeId="ns=1;i=351" DataType="Range" Historizing="true">
+    <DisplayName>InstrumentRange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=351</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=354" BrowseName="0:EngineeringUnits" ParentNodeId="ns=1;i=351" DataType="EUInformation" Historizing="true">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=351</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
     </References>

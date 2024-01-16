@@ -67,12 +67,12 @@ class OpcuaWorker:
                 self._client.application_uri = self._client_app_uri
                 self._client.set_user(self._server.username)
                 self._client.set_password(self._server.password)
-                await self._client.set_security(
-                    policy=SecurityPolicyBasic256Sha256,
-                    certificate=str(self._cert),
-                    private_key=str(self._private_key),
-                    mode=ua.MessageSecurityMode.SignAndEncrypt
-                )
+                # await self._client.set_security(
+                #     policy=SecurityPolicyBasic256Sha256,
+                #     certificate=str(self._cert),
+                #     private_key=str(self._private_key),
+                #     mode=ua.MessageSecurityMode.SignAndEncrypt
+                # )
                 async with self._client:
                     self._subscriber = await self._client.create_subscription(500, self)
                     try:

@@ -1,6 +1,5 @@
 from asyncua import Node
 
-from aquacloud_common.models.sensor.environment.ftu_sensor import FTUSensorModel
 from aquacloud_common.models.sensor.environment.ph_sensor import PHSensorModel
 from core.opcua.nodes.analog_item_node import AnalogItemNode
 from core.opcua.nodes.base_sensor_node import BaseSensorNode

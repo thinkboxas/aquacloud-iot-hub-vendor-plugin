@@ -7,6 +7,7 @@ from asyncua.ua import String, Int16, NodeId
 from asyncua.server.users import UserRole, User
 
 from aquacloud_common.models.sensor.base_sensor import BaseSensorModel
+from aquacloud_common.models.sensor.environment.co2_sensor import CO2SensorModel
 from aquacloud_common.models.sensor.environment.ftu_sensor import FTUSensorModel
 from aquacloud_common.models.sensor.environment.light_sensor import LightSensorModel
 from aquacloud_common.models.sensor.environment.ntu_sensor import NTUSensorModel
@@ -22,6 +23,7 @@ from aquacloud_common.models.sensor.feeding.feed_silo_sensor import FeedSiloSens
 from aquacloud_common.models.sensor.feeding.feeding_intensity_sensor import FeedingIntensitySensorModel
 from core.opcua.nodes.base_sensor_node import BaseSensorNode
 from core.opcua.nodes.calculated_accumulated_deeding_sensor_node import CalculatedAccumulatedFeedingSensorNode
+from core.opcua.nodes.co2_sensor_node import CO2SensorNode
 from core.opcua.nodes.feed_silo_sensor_node import FeedSiloSensorNode
 from core.opcua.nodes.feeding_intensity_sensor_node import FeedingIntensitySensorNode
 from core.opcua.nodes.ftu_sensor_node import FTUSensorNode
@@ -34,8 +36,8 @@ from core.opcua.nodes.salinity_sensor_node import SalinitySensorNode
 from core.opcua.nodes.sea_current_sensor_node import SeaCurrentSensorNode
 from core.opcua.nodes.temperature_sensor_node import TemperatureSensorNode
 
-USERNAME = os.getenv("OPC_UA_USERNAME", "aquacloud")
-PASSWORD = os.getenv("OPC_UA_PASSWORD", "123456789")
+USERNAME = os.getenv("OPC_UA_USERNAME", "")
+PASSWORD = os.getenv("OPC_UA_PASSWORD", "")
 
 _logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.WARNING)
@@ -152,6 +154,9 @@ class OPCUAServer:
             elif class_name == PHSensorModel:
                 s = PHSensorModel.model_validate(sensor.model_dump())
                 sensor_node = PHSensorNode(s, ns, sensors_node, identifier)
+            elif class_name == CO2SensorModel:
+                s = CO2SensorModel.model_validate(sensor.model_dump())
+                sensor_node = CO2SensorNode(s, ns, sensors_node, identifier)
             elif class_name == LightSensorModel:
                 s = LightSensorModel.model_validate(sensor.model_dump())
                 sensor_node = LightSensorNode(s, ns, sensors_node, identifier)

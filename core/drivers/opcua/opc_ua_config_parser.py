@@ -4,6 +4,7 @@ import logging
 from aquacloud_common.core.core_type import EnvironmentSensorType
 from aquacloud_common.models.organization.unit import UnitModel
 from aquacloud_common.models.sensor.base_sensor import BaseSensorModel
+from aquacloud_common.models.sensor.environment.co2_sensor import CO2SensorModel
 from aquacloud_common.models.sensor.environment.ftu_sensor import FTUSensorModel
 from aquacloud_common.models.sensor.environment.light_sensor import LightSensorModel
 from aquacloud_common.models.sensor.environment.ntu_sensor import NTUSensorModel
@@ -127,7 +128,7 @@ class OpcuaConfigurationParser:
         elif sensor.sensor_type == EnvironmentSensorType.SALINITY:
             model = SalinitySensorModel()
             model.salinity.engineering_units.namespace_uri = namespace_uri
-            model.salinity.engineering_units.display_name = "ppt"
+            model.salinity.engineering_units.display_name = "√"
             model.salinity.engineering_units.description = "Parts per thousand"
         elif sensor.sensor_type == EnvironmentSensorType.SEA_CURRENT:
             model = SeaCurrentSensorModel()
@@ -153,6 +154,11 @@ class OpcuaConfigurationParser:
             model.ph.engineering_units.namespace_uri = namespace_uri
             model.ph.engineering_units.display_name = "pH"
             model.ph.engineering_units.description = "pH"
+        elif sensor.sensor_type == EnvironmentSensorType.CO2:
+            model = CO2SensorModel()
+            model.co2.engineering_units.namespace_uri = namespace_uri
+            model.co2.engineering_units.display_name = "ppm"
+            model.co2.engineering_units.description = "Parts per million"
         elif sensor.sensor_type == EnvironmentSensorType.LIGHT:
             model = LightSensorModel()
             model.lux.engineering_units.namespace_uri = namespace_uri
