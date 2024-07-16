@@ -20,7 +20,7 @@ Vendor Plugin is packaged as Docker Image
 **Flow**
 
  Basically, the template creates the standard opcua server automatically. This includes AquaCloudStandard ObjectType node such as Global, Country, etc...
- We need to define AquaStandard Sensors with unit container if sensor in Unit in (driver) config file (feeding_config.json, opcua_config.json, etc..).
+ We need to define AquaCloudStandard Sensors with unit container if sensor in Unit in (driver) config file (feeding_config.json, opcua_config.json, etc..).
  Configuration parser will read config from config file and tell opcua server creates AquaCloudStandard Sensors.
  For example opcua_config.json (OpuUa driver):
 
