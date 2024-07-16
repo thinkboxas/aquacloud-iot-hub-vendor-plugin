@@ -16,12 +16,16 @@ Vendor Plugin is packaged as Docker Image
 + OpcUa server that implemented semantic model as standard
 + Configuration parser: define mapping validation, vendor sensors structure
 + Drivers: sensor driver that implemented protocol to connect and get data from sensor
-+ Flow:
+
+**Flow**
+
  Basically, the template creates the standard opcua server automatically include AquaStandard ObjectType node such as Global, Country, etc...
  We need to define AquaStandard Sensors with unit container if sensor in Unit in (driver) config file (feeding_config.json, opcua_config.json, etc..).
  Configuration parser will read config from config file and tell opcua server create AquaStandard Sensors.
  For example opcua_config.json (OpuUa driver):
+
  "sensors": [
+
       {
         "sensor_type": "TemperatureSensorType",
         "sensor_name": "TemperatureSensor_2",
@@ -35,7 +39,9 @@ Vendor Plugin is packaged as Docker Image
         "mapping": {
           "Temperature": {"ns": 4,"i": 6}
         }
-  ]
+
+ ]
+ 
  sensor_type: Opcua module will create 2 instances of "TemperatureSensorType" that defined in Standard 
  sensor_name: Opcua Sensor node name
  mapping: mapping between AquaStandard Sensors and Real Sensor. driver will get data from real sensor and use mapping and put to Opc Ua Standard Sensor node
