@@ -1,9 +1,9 @@
-The Vendor Plugin helps vendors integrate existing sensor systems with AquaCloud standard
+The Vendor Plugin helps vendors integrate existing sensor systems with AquaCloud Standard
 
 **AquaCloud Vendor Plugin V1.0.3** 
 
 Define plugin template, input/output modules that contributor can be used to implement vendor plugin to get data from
-sensors then convert to AquaCloud standard semantic model.
+sensors then convert to AquaCloud Standard semantic model.
 
 Version V1.0.3 support OpcUa driver, Feeding sensor driver, and Environment sensor driver
 
@@ -13,19 +13,17 @@ Vendor Plugin is packaged as Docker Image
 
 **Modules**
 
-+ OpcUa server that implemented semantic model as standard
++ OpcUa server that implemented semantic model as Standard
 + Configuration parser: define mapping validation, vendor sensors structure
 + Drivers: sensor driver that implemented protocol to connect and get data from sensor
 
 **Flow**
 
- Basically, the template creates the standard opcua server automatically include AquaStandard ObjectType node such as Global, Country, etc...
- We need to define AquaStandard Sensors with unit container if sensor in Unit in (driver) config file (feeding_config.json, opcua_config.json, etc..).
- Configuration parser will read config from config file and tell opcua server create AquaStandard Sensors.
+ Basically, the template creates the opcua server automatically. This includes AquaCloud Standard ObjectType node such as Global, Country, etc...
+ We need to define AquaCloud Standard Sensors with unit container if sensor in Unit in (driver) config file (feeding_config.json, opcua_config.json, etc..).
+ Configuration parser will read config from config file and tell opcua server creates AquaCloud Standard Sensors.
 
-For example: 
- 
- **opcua_config.json (OpuUa driver):**
+ For example opcua_config.json (OpuUa driver):
 
  "sensors": [
 
@@ -45,11 +43,13 @@ For example:
 
  ]
  
- sensor_type: Opcua module will create 2 instances of "TemperatureSensorType" that defined in Standard 
+ sensor_type: Opcua module will create 2 instances of "TemperatureSensorType" that was defined in Standard 
+ 
  sensor_name: Opcua Sensor node name
- mapping: mapping between AquaStandard Sensors and Real Sensor. driver will get data from real sensor and use mapping and put to Opc Ua Standard Sensor node
+ 
+ mapping: mapping between AquaCloud Standard Sensors and Real Sensor. driver will get data from real sensor and use mapping and put to OpcUa Standard Sensor node
 
- You can create config file that adapt with your driver, no need same format in example and have individual ConfigParser to handle this config.
+ You can create configuration file that adapts your driver, no need sames format on example and have individual ConfigParser to handle this config.
 
 **Usage**
 
